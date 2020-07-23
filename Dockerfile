@@ -64,57 +64,57 @@ RUN \
         unixodbc-dev \
     #  ========== docker-php-ext install ===============================
     # for gd
-    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install $mc gd \
-    # for bz2
-    && docker-php-ext-install $mc bz2 \
-    # for enchant
-    && docker-php-ext-install $mc enchant \
-    # for gmp
-    && ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h \
-    && docker-php-ext-install $mc gmp \
-    # for soap wddx xmlrpc tidy xsl
-    && docker-php-ext-install $mc soap wddx xmlrpc tidy xsl \
-    # for zip
-    && docker-php-ext-install $mc zip \
-    # for snmp
-    && docker-php-ext-install $mc snmp \
-    # for pgsql pdo_pgsql
-    && docker-php-ext-install $mc pgsql pdo_pgsql \
-    # for pspell
-    && docker-php-ext-install $mc pspell \
-    # for recode
-    && docker-php-ext-install $mc recode \
-    # for pdo_firebird
-    && docker-php-ext-install $mc pdo_firebird \
-    # for pdo_dblib
-    && docker-php-ext-configure pdo_dblib --with-libdir=lib/x86_64-linux-gnu \
-    && docker-php-ext-install $mc pdo_dblib \
-    # for ldap
-    && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu \
-    && docker-php-ext-install $mc ldap \
-    # for imap
-    && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
-    && docker-php-ext-install $mc imap \
-    # for interbase
-    && docker-php-ext-install $mc interbase \
-    # for intl
-    && docker-php-ext-install $mc intl \
-    # no dependency extension
-    && docker-php-ext-install $mc bcmath \
-    && docker-php-ext-install $mc calendar \
-    && docker-php-ext-install $mc exif \
-    && docker-php-ext-install $mc gettext \
-    && docker-php-ext-install $mc sockets \
-    && docker-php-ext-install $mc dba \
-    && docker-php-ext-install $mc mysqli \
-    && docker-php-ext-install $mc pcntl \
-    && docker-php-ext-install $mc pdo_mysql \
-    && docker-php-ext-install $mc shmop \
-    && docker-php-ext-install $mc sysvmsg \
-    && docker-php-ext-install $mc sysvsem \
-    && docker-php-ext-install $mc sysvshm \
-    # Install PECL extensions
+#    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+#    && docker-php-ext-install $mc gd \
+#    # for bz2
+#    && docker-php-ext-install $mc bz2 \
+#    # for enchant
+#    && docker-php-ext-install $mc enchant \
+#    # for gmp
+#    && ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h \
+#    && docker-php-ext-install $mc gmp \
+#    # for soap wddx xmlrpc tidy xsl
+#    && docker-php-ext-install $mc soap wddx xmlrpc tidy xsl \
+#    # for zip
+#    && docker-php-ext-install $mc zip \
+#    # for snmp
+#    && docker-php-ext-install $mc snmp \
+#    # for pgsql pdo_pgsql
+#    && docker-php-ext-install $mc pgsql pdo_pgsql \
+#    # for pspell
+#    && docker-php-ext-install $mc pspell \
+#    # for recode
+#    && docker-php-ext-install $mc recode \
+#    # for pdo_firebird
+#    && docker-php-ext-install $mc pdo_firebird \
+#    # for pdo_dblib
+#    && docker-php-ext-configure pdo_dblib --with-libdir=lib/x86_64-linux-gnu \
+#    && docker-php-ext-install $mc pdo_dblib \
+#    # for ldap
+#    && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu \
+#    && docker-php-ext-install $mc ldap \
+#    # for imap
+#    && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
+#    && docker-php-ext-install $mc imap \
+#    # for interbase
+#    && docker-php-ext-install $mc interbase \
+#    # for intl
+#    && docker-php-ext-install $mc intl \
+#    # no dependency extension
+#    && docker-php-ext-install $mc bcmath \
+#    && docker-php-ext-install $mc calendar \
+#    && docker-php-ext-install $mc exif \
+#    && docker-php-ext-install $mc gettext \
+#    && docker-php-ext-install $mc sockets \
+#    && docker-php-ext-install $mc dba \
+#    && docker-php-ext-install $mc mysqli \
+#    && docker-php-ext-install $mc pcntl \
+#    && docker-php-ext-install $mc pdo_mysql \
+#    && docker-php-ext-install $mc shmop \
+#    && docker-php-ext-install $mc sysvmsg \
+#    && docker-php-ext-install $mc sysvsem \
+#    && docker-php-ext-install $mc sysvshm \
+    # ================ Install PECL extensions ====================
     # for redis
     && pecl install redis && docker-php-ext-enable redis \
     # for imagick require PHP version 7.1
@@ -122,7 +122,7 @@ RUN \
     # for memcached require PHP version 7.1
     && pecl install memcached && docker-php-ext-enable memcached \
     # for mcrypt require PHP version 7.1
-    && pecl install mcrypt-1.0.2 && docker-php-ext-enable mcrypt \
+    && pecl install mcrypt-1.0.1 && docker-php-ext-enable mcrypt \
     # for mongodb
     && pecl install mongodb && docker-php-ext-enable mongodb \
     # for swoole
