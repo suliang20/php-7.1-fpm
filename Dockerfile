@@ -114,6 +114,7 @@ RUN \
 #    && docker-php-ext-install $mc sysvmsg \
 #    && docker-php-ext-install $mc sysvsem \
 #    && docker-php-ext-install $mc sysvshm \
+    && docker-php-ext-install $mc mcrypt \
     # ================ Install PECL extensions ====================
     # for redis
     && pecl install redis && docker-php-ext-enable redis \
