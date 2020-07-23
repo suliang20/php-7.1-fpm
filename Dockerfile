@@ -117,17 +117,17 @@ RUN \
     && docker-php-ext-install $mc mcrypt \
     # ================ Install PECL extensions ====================
     # for redis
-    && pecl install redis && docker-php-ext-enable redis \
-    # for imagick require PHP version 7.1
-    && pecl install imagick && docker-php-ext-enable imagick \
-    # for memcached require PHP version 7.1
-    && pecl install memcached && docker-php-ext-enable memcached \
-    # for mcrypt require PHP version 7.1
-    && pecl install mcrypt-1.0.1 && docker-php-ext-enable mcrypt \
-    # for mongodb
-    && pecl install mongodb && docker-php-ext-enable mongodb \
-    # for swoole
-    && pecl install swoole && docker-php-ext-enable swoole \
+#    && pecl install redis && docker-php-ext-enable redis \
+#    # for imagick require PHP version 7.1
+#    && pecl install imagick && docker-php-ext-enable imagick \
+#    # for memcached require PHP version 7.1
+#    && pecl install memcached && docker-php-ext-enable memcached \
+#    # for mcrypt require PHP version 7.1
+#    && pecl install mcrypt-1.0.1 && docker-php-ext-enable mcrypt \
+#    # for mongodb
+#    && pecl install mongodb && docker-php-ext-enable mongodb \
+#    # for swoole
+#    && pecl install swoole && docker-php-ext-enable swoole \
     # clear tmp data
     && docker-php-source delete \
     && apt-get clean all \
