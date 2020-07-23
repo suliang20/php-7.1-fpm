@@ -16,52 +16,52 @@ RUN \
     export mc="-j$(nproc)" \
     && apt-get update \
     && apt-get install -y \
-        # for git
-        git \
+#        # for git
+#        git \
         # for iconv mcrypt
         libmcrypt-dev \
         #   for gd
         libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
-        # for bz2
-        libbz2-dev \
-        # for enchant
-        libenchant-dev \
-        # for gmp
-        libgmp-dev \
-        # for soap wddx xmlrpc tidy xsl
-        libxml2-dev libtidy-dev libxslt1-dev \
-        # for zip
-        libzip-dev \
-        # for snmp
-        libsnmp-dev snmp \
-        # for pgsql pdo_pgsql
-        libpq-dev \
-        # for pspell
-        libpspell-dev \
-        # for recode
-        librecode-dev \
-        # for pdo_firebird
-        firebird-dev \
-        # for pdo_dblib
-        freetds-dev \
-        # for ldap
-        libldap2-dev \
-        # for imap
-        libc-client-dev libkrb5-dev \
-        # for interbase
-        firebird-dev \
-        # for intl
-        libicu-dev \
-        # for gearman
-        libgearman-dev \
-        # for magick
-        libmagickwand-dev \
-        # for memcached
-        zlib1g-dev libmemcached-dev \
-        # for mongodb
-        autoconf pkg-config libssl-dev \
-        # for odbc pdo_odbc
-        unixodbc-dev \
+#        # for bz2
+#        libbz2-dev \
+#        # for enchant
+#        libenchant-dev \
+#        # for gmp
+#        libgmp-dev \
+#        # for soap wddx xmlrpc tidy xsl
+#        libxml2-dev libtidy-dev libxslt1-dev \
+#        # for zip
+#        libzip-dev \
+#        # for snmp
+#        libsnmp-dev snmp \
+#        # for pgsql pdo_pgsql
+#        libpq-dev \
+#        # for pspell
+#        libpspell-dev \
+#        # for recode
+#        librecode-dev \
+#        # for pdo_firebird
+#        firebird-dev \
+#        # for pdo_dblib
+#        freetds-dev \
+#        # for ldap
+#        libldap2-dev \
+#        # for imap
+#        libc-client-dev libkrb5-dev \
+#        # for interbase
+#        firebird-dev \
+#        # for intl
+#        libicu-dev \
+#        # for gearman
+#        libgearman-dev \
+#        # for magick
+#        libmagickwand-dev \
+#        # for memcached
+#        zlib1g-dev libmemcached-dev \
+#        # for mongodb
+#        autoconf pkg-config libssl-dev \
+#        # for odbc pdo_odbc
+#        unixodbc-dev \
     #  ========== docker-php-ext install ===============================
     # for gd
 #    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
