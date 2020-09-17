@@ -18,9 +18,10 @@ RUN \
     && apt-get install -y \
         # for git
         git \
+        libcurl4-gnutls-dev \
         # for iconv mcrypt
         libmcrypt-dev \
-        #   for gd
+        # for gd
         libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
         # for bz2
         libbz2-dev \
@@ -126,6 +127,10 @@ RUN \
     && pecl install mongodb && docker-php-ext-enable mongodb \
     # for swoole
     && pecl install swoole && docker-php-ext-enable swoole \
+    # for msgpack
+    && pecl install msgpack && docker-php-ext-enable msgpack \
+    # for yar
+    && pecl install yar && docker-php-ext-enable yar \
     # clear tmp data
     && docker-php-source delete \
     && apt-get clean all \
