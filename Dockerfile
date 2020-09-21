@@ -131,6 +131,8 @@ RUN \
     && pecl install msgpack && docker-php-ext-enable msgpack \
     # for yar
     && pecl install yar && docker-php-ext-enable yar \
+    # for yaf
+    && pecl install yaf && docker-php-ext-enable yaf \
     # clear tmp data
     && docker-php-source delete \
     && apt-get clean all \
